@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#111827">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vodafone Cash SMS Gateway"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continuous SMS Webhook Syncing Service"
+        android:textColor="#9CA3AF"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Configuration Box -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Django Server Base URL (e.g., Ngrok):"
+        android:textColor="#E5E7EB"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_marginBottom="5dp" />
+
+    <EditText
+        android:id="@+id/edit_server_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1F2937"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:hint="https://xxxx.ngrok-free.app/"
+        android:textColorHint="#4B5563"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shared Webhook Authentication Token:"
+        android:textColor="#E5E7EB"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_marginBottom="5dp" />
+
+    <EditText
+        android:id="@+id/edit_secret_token"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1F2937"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:hint="Bearer security token"
+        android:textColorHint="#4B5563"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/btn_save_config"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Gateway Configuration"
+        android:backgroundTint="#DC2626"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- Operational State Metrics -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service Operations Log"
+        android:textColor="#E5E7EB"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginBottom="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#1F2937"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txt_console_logs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[System] Initializing SMS listeners...\n[System] Awaiting SMS broadcasts from Vodafone Cash..."
+            android:textColor="#34D399"
+            android:textSize="11sp"
+            android:fontFamily="monospace"/>
+    </ScrollView>
+
+</LinearLayout>

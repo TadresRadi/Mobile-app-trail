@@ -22,8 +22,8 @@ data class WebhookResponse(
     val next_url: String? // optional next step URL returned by backend
 )
 interface ApiService {
-//    // ✅ FIXED: Full path from root
-//    @POST("api/payments/vodafone-cash/webhook/")
+    // ✅ FIXED: Full path from root
+   @POST("api/payments/vodafone-cash/webhook/")
     fun sendWebhook(
         @Header("Authorization") bearerToken: String,
         @Body payload: WebhookPayload
